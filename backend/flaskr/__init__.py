@@ -21,8 +21,8 @@ def create_app(test_config=None):
     setup_db(app)
 
     # Setting up CORS
-    CORS(app, resources={r'/*': {'origins':'*'}})
-    # CORS(app)
+    # CORS(app, resources={r'/*': {'origins':'*'}})
+    CORS(app)
     
     # Using the after_request decorator to set Access-Control-Allow
     @app.after_request
