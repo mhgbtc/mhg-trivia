@@ -70,7 +70,7 @@ def create_app(test_config=None):
                 "success": True,
                 "questions": current_questions,
                 "total_questions": len(selection),
-                "current_category": "All",
+                "current_category": "All Categories",
                 "categories": data_categories
             }
         )
@@ -124,11 +124,10 @@ def create_app(test_config=None):
                     {
                         "success": True,
                         "questions": returned_questions,
-                        "current_category": "All",
+                        "current_category": "All Categories",
                         "total_questions": len(returned_questions)
                     }
                 )
-                
             else:
                 if new_question == "" or new_answer == "":
                     abort(422)
